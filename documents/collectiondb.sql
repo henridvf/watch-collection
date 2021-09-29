@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.35)
 # Database: collectiondb
-# Generation Time: 2021-09-27 21:24:04 +0000
+# Generation Time: 2021-09-29 12:54:24 +0000
 # ************************************************************
 
 
@@ -38,7 +38,11 @@ LOCK TABLES `brands` WRITE;
 INSERT INTO `brands` (`id`, `name`)
 VALUES
 	(1,'OMEGA'),
-	(2,'TAG HEUER');
+	(2,'TAG HEUER'),
+	(3,'ETERNA'),
+	(4,'COURLANDER'),
+	(5,'SWATCH'),
+	(6,'APPLE');
 
 /*!40000 ALTER TABLE `brands` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -57,6 +61,7 @@ CREATE TABLE `watches` (
   `price` float DEFAULT NULL,
   `link` varchar(255) DEFAULT NULL,
   `brand` int(11) unsigned NOT NULL,
+  `image` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_watches_brands` (`brand`),
   CONSTRAINT `fk_watches_brands` FOREIGN KEY (`brand`) REFERENCES `brands` (`id`)
@@ -65,10 +70,15 @@ CREATE TABLE `watches` (
 LOCK TABLES `watches` WRITE;
 /*!40000 ALTER TABLE `watches` DISABLE KEYS */;
 
-INSERT INTO `watches` (`id`, `name`, `purchase_date`, `notes`, `price`, `link`, `brand`)
+INSERT INTO `watches` (`id`, `name`, `purchase_date`, `notes`, `price`, `link`, `brand`, `image`)
 VALUES
-	(1,'DeVille Mens Co-Axial 39.5mm Automatic Watch','2015-08-20','Elegant, classic design. These timepieces are characterised by pure styling with luxury finishes, and exude a timeless design.',2870,'https://www.watches-of-switzerland.co.uk/Omega-De-Ville-Mens-Co+Axial-39.5mm-Automatic-Watch-O42413402002001/p/17330971?gclid=Cj0KCQjw18WKBhCUARIsAFiW7JwZcseNfabJYPpjdPOsh-fjU7_7_lFbrwN3_GV_wIFdS7HZp022P9AaAkvoEALw_wcB',1),
-	(2,'Formula 1 Aston Martin Red Bull Racing Special Edition 2020','2018-03-29','The sleek design takes inspiration from the new Aston Martin Red Bull Racing Formula 1 car that was presented on February 19th, 2020 in Barcelona, Spain',1500,'https://www.watches-of-switzerland.co.uk/TAG-Heuer-Formula-1-Aston-Martin-Red-Bull-Racing-Special-Edition-2020-CAZ101AB.BA0842/p/17381908',2);
+	(1,'De Ville Mens Co-Axial Chronometer','2015-08-20','Elegant, classic design. These timepieces are characterised by pure styling with luxury finishes, and exude a timeless design.',2870,'https://www.watches-of-switzerland.co.uk/Omega-De-Ville-Mens-Co+Axial-39.5mm-Automatic-Watch-O42413402002001/p/17330971?gclid=Cj0KCQjw18WKBhCUARIsAFiW7JwZcseNfabJYPpjdPOsh-fjU7_7_lFbrwN3_GV_wIFdS7HZp022P9AaAkvoEALw_wcB',1,'pexels-jatin-anand-125779.jpg'),
+	(2,'Seamaster Automatic 120m','2018-03-29','Sporty, classic stainless steel band, water resistant for water sports including diving.',945,'',1,'pexels-jatin-anand-125779.jpg'),
+	(3,'1960s Eterna 18 Karat Yellow Gold','1968-03-16','1960s vintage Eterna 18 Karat Yellow Gold Men Wristwatch',1475,NULL,3,'watch-1526539.jpg'),
+	(4,'Courlander Richmond Quartz','2020-09-23','Time piece usable as pocket or on stand.',345,NULL,4,'watch-1526539.jpg'),
+	(5,'Swatch Early Edition','1996-08-20','One of the first ever Swatches',50,NULL,5,NULL),
+	(6,'Swatch Irony Stainless Steel','2005-09-24','Style classy, casual, or anywhere in between, these tough and timeless stainless steel watches have you covered.',162,NULL,5,NULL),
+	(7,'Apple Watch Series 5','2019-07-19','Apple watch 44mm Space Grey',350,NULL,6,NULL);
 
 /*!40000 ALTER TABLE `watches` ENABLE KEYS */;
 UNLOCK TABLES;
