@@ -14,26 +14,7 @@
     <section class="main_container heading"><h2>Watches Collection</h2></section>
 
     <section class="main_container collection">
-        <?php
-            $watches = getAllWatches();
-
-            foreach($watches as $watch) {
-                $coll_item = '<div class="collection_item">';
-                $img_file = is_null($watch["image"]) ? '' : $watch["image"];
-                $img = getImagePath($img_file);
-                $coll_item .= '<img src="'. $img .'" alt="Picture of a '. $watch['name'] .'" />';
-                $coll_item .= '<h5>' . $watch["brand_name"] . '</h5>';
-                $coll_item .= '<p>' . $watch["name"] . '</p>';
-                $coll_item .= '<hr>';
-                $coll_item .= '<div class="split"><span><strong>Price</strong></span><span>£ ' . $watch["price"] .
-                    '</span></div>';
-                $coll_item .= '<div class="split"><span><strong>Purchased</strong></span><span>' .
-                    $watch["purchase_date"] . '</span></div>';
-                $coll_item .= '<hr>';
-                $coll_item .= '<p>' . $watch["notes"] . '</p>';
-                $coll_item .= '</div>';
-                echo $coll_item;
-            }; ?>
+        <?php echo displayCollection(); ?>
     </section>
 
     <section class="main_container footer">
