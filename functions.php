@@ -24,7 +24,7 @@ function getAllWatches(): array
  */
 function getImagePath(string $imagePath): string
 {
-    $path='';
+    $path = '';
     $imageStartsWith = substr($imagePath, 0, strlen('http'));
     if (!$imageStartsWith) {
         $path = 'https://via.placeholder.com/250/FAFAD2';
@@ -48,7 +48,7 @@ function displayCollection(): string
     foreach ($watches as $watch) {
         // create and add to display collection
         $display .= createCollectionItem($watch);
-    };
+    }
     return $display;
 }
 
