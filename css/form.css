@@ -5,7 +5,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #eaeaea;
+    background-color: #EAEAEA;
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -14,7 +14,7 @@ h2 {
 }
 
 .error {
-    color: #b22222;
+    color: #B22222;
 }
 
 .contentform {
@@ -53,16 +53,16 @@ input, select {
     padding: 10px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid #CCC;
     border-radius: 4px;
     box-sizing: border-box;
-    background-color: #f8f8f8;
+    background-color: #F8F8F8;
 }
 
 input[type=submit], input[type=reset], a {
     width: 30%;
     background-color: #4CAF50;
-    color: white;
+    color: #FFFFFF;
     padding: 10px 20px;
     margin: 8px 0;
     border: none;
@@ -72,7 +72,7 @@ input[type=submit], input[type=reset], a {
 }
 
 input[type=submit]:hover, input[type=reset]:hover {
-    background-color: #45a049;
+    background-color: #45A049;
 }
 
 textarea {
@@ -80,8 +80,8 @@ textarea {
     height: 100px;
     padding: 12px 20px;
     box-sizing: border-box;
-    border: 1px solid #ccc;
+    border: 1px solid #CCC;
     border-radius: 4px;
-    background-color: #f8f8f8;
+    background-color: #F8F8F8;
     resize: none;
 }

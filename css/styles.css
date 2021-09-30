@@ -5,7 +5,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #eaeaea;
+    background-color: #EAEAEA;
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -34,7 +34,7 @@ h5 {
 .collection_item {
     color: #000000;
     margin: 5px 5px;
-    background-color: #d3d3d3;
+    background-color: #D3D3D3;
     border-radius: 5px;
     min-height: 350px;
     flex: 20%;
