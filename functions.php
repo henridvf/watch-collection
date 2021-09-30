@@ -76,3 +76,11 @@ function createCollectionItem($watch): string
 
     return $coll_item;
 }
+
+function getAllBrands(): array
+{
+    $db = getDBConnection();
+    $query = $db->prepare("SELECT `id`, `name` FROM `brands`");
+    $query->execute();
+    return $query->fetchAll();
+}
