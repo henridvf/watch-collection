@@ -5,7 +5,8 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: #EAEAEA;
+    font-family: 'Quicksand', sans-serif;
 }
 
 h5 {
@@ -16,7 +17,6 @@ h5 {
 .main_container {
     display: flex;
     flex-wrap: wrap;
-    align-items: start;
     width: 80%;
     margin: 0 auto;
 }
@@ -25,18 +25,23 @@ h5 {
     justify-content: center;
 }
 
-.heading .footer {
-    justify-content: start;
+.heading, .footer {
+    align-items: center;
+    justify-content: space-between;
 }
+
 
 .collection_item {
     color: #000000;
     margin: 5px 5px;
-    background-color: #d3d3d3;
+    background-color: #D3D3D3;
     border-radius: 5px;
     min-height: 350px;
     flex: 20%;
     max-width: 25%;
+    border-color: #a9a9a9;
+    border-width: 2px;
+    border-style: solid;
 }
 
 .collection_item img {
@@ -62,6 +67,21 @@ h5 {
     padding: 0 5px;
 }
 
+a {
+    background-color: #4CAF50;
+    color: white;
+    padding: 6px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #45a049;
+}
+
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
     .collection_item {
@@ -75,5 +95,9 @@ h5 {
     .collection_item {
         flex: 50%;
         max-width: 45%;
+    }
+    .heading {
+        justify-content: space-around;
+        margin-bottom: 20px;
     }
 }
