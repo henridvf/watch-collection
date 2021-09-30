@@ -39,7 +39,7 @@ h5 {
     min-height: 350px;
     flex: 20%;
     max-width: 25%;
-    border-color: #a9a9a9;
+    border-color: #A9A9A9;
     border-width: 2px;
     border-style: solid;
 }
@@ -69,7 +69,7 @@ h5 {
 
 a {
     background-color: #4CAF50;
-    color: white;
+    color: #FFFFFF;
     padding: 6px 20px;
     margin: 8px 0;
     border: none;
@@ -79,7 +79,7 @@ a {
 }
 
 a:hover {
-    background-color: #45a049;
+    background-color: #45A049;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
